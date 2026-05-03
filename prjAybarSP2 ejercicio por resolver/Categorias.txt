@@ -1,0 +1,8 @@
+1|Procesadores
+2|Memoria RAM
+3|Tarjetas Gráficas
+4|Discos Duros
+5|Fuentes de Poder
+6|Cables y Conectores
+7|Ventiladores
+8|Motherboards
