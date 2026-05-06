@@ -25,7 +25,7 @@ namespace prjAybarSP2_ejercicio_por_resolver
             string rutaProyecto = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..");
             rutaProyecto = Path.GetFullPath(rutaProyecto);
 
-            rutaBaseDatos = Path.Combine(rutaProyecto, "Base Datos", "bdGoodHard (1).accdb");
+            rutaBaseDatos = Path.Combine(rutaProyecto, "Base Datos", "bdGoodHard1.accdb");
             rutaCategoriasArchivo = Path.Combine(rutaProyecto, "Categorias.txt");
             rutaArticulosArchivo = Path.Combine(rutaProyecto, "Articulos.txt");
 
@@ -209,26 +209,26 @@ namespace prjAybarSP2_ejercicio_por_resolver
             }
         }
 
-        private void InsertarCategoria(OleDbConnection conexion, string idCategoria, string nombreCategoria)
+        private void InsertarCategoria(OleDbConnection conexion, string idCategoria, string Nombre)
         {
-            string consulta = "INSERT INTO Categorias (idCategoria, nombreCategoria) VALUES (?, ?)";
+            string consulta = "INSERT INTO Categorias (idCategoria, Nombre) VALUES (?, ?)";
 
             using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
             {
                 comando.Parameters.AddWithValue("@idCategoria", idCategoria);
-                comando.Parameters.AddWithValue("@nombreCategoria", nombreCategoria);
+                comando.Parameters.AddWithValue("@Nombre", Nombre);
                 comando.ExecuteNonQuery();
             }
         }
 
         private void InsertarArticulo(OleDbConnection conexion, string idArticulo, string nombreArticulo, string idCategoria, string precio)
         {
-            string consulta = "INSERT INTO Articulos (idArticulo, nombreArticulo, idCategoria, precio) VALUES (?, ?, ?, ?)";
+            string consulta = "INSERT INTO Articulos (idArticulo, Nombre, idCategoria, precio) VALUES (?, ?, ?, ?)";
 
             using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
             {
                 comando.Parameters.AddWithValue("@idArticulo", idArticulo);
-                comando.Parameters.AddWithValue("@nombreArticulo", nombreArticulo);
+                comando.Parameters.AddWithValue("@Nombre", nombreArticulo);
                 comando.Parameters.AddWithValue("@idCategoria", idCategoria);
                 comando.Parameters.AddWithValue("@precio", Convert.ToDecimal(precio));
                 comando.ExecuteNonQuery();
@@ -247,13 +247,17 @@ namespace prjAybarSP2_ejercicio_por_resolver
             }
             catch
             {
-                // Si la tabla está vacía o no existe, continuar
             }
         }
 
         private void AgregarInfo(string mensaje)
         {
             txtInfo.AppendText(mensaje);
+        }
+
+        private void btnMigra_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

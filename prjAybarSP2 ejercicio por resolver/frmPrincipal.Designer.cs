@@ -61,6 +61,7 @@
             this.btnMigra.TabIndex = 2;
             this.btnMigra.Text = "Inciar Migraciòn";
             this.btnMigra.UseVisualStyleBackColor = true;
+            this.btnMigra.Click += new System.EventHandler(this.btnMigra_Click_1);
             // 
             // frmPrincipal
             // 
