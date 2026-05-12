@@ -45,22 +45,24 @@
             // 
             // txtInfo
             // 
-            this.txtInfo.BackColor = System.Drawing.SystemColors.MenuText;
-            this.txtInfo.ForeColor = System.Drawing.Color.Red;
+            this.txtInfo.BackColor = System.Drawing.SystemColors.Info;
+            this.txtInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtInfo.Location = new System.Drawing.Point(12, 110);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.Size = new System.Drawing.Size(234, 282);
             this.txtInfo.TabIndex = 1;
+            this.txtInfo.TextChanged += new System.EventHandler(this.txtInfo_TextChanged);
             // 
             // btnMigra
             // 
+            this.btnMigra.BackColor = System.Drawing.Color.IndianRed;
             this.btnMigra.Location = new System.Drawing.Point(56, 31);
             this.btnMigra.Name = "btnMigra";
             this.btnMigra.Size = new System.Drawing.Size(143, 36);
             this.btnMigra.TabIndex = 2;
             this.btnMigra.Text = "Inciar Migraciòn";
-            this.btnMigra.UseVisualStyleBackColor = true;
+            this.btnMigra.UseVisualStyleBackColor = false;
             this.btnMigra.Click += new System.EventHandler(this.btnMigra_Click_1);
             // 
             // frmPrincipal

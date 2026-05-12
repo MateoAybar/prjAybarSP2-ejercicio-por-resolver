@@ -259,5 +259,10 @@ namespace prjAybarSP2_ejercicio_por_resolver
         {
 
         }
+
+        private void txtInfo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
