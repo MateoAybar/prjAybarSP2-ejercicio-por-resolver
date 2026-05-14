@@ -41,11 +41,11 @@
             this.lblInfo.Size = new System.Drawing.Size(68, 13);
             this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = "Informaciòn :";
-            this.lblInfo.Click += new System.EventHandler(this.label1_Click);
+            this.lblInfo.Click += new System.EventHandler(this.lblInfo_Click);
             // 
             // txtInfo
             // 
-            this.txtInfo.BackColor = System.Drawing.SystemColors.Info;
+            this.txtInfo.BackColor = System.Drawing.Color.Red;
             this.txtInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtInfo.Location = new System.Drawing.Point(12, 110);
             this.txtInfo.Multiline = true;
@@ -56,19 +56,20 @@
             // 
             // btnMigra
             // 
-            this.btnMigra.BackColor = System.Drawing.Color.IndianRed;
+            this.btnMigra.BackColor = System.Drawing.Color.Red;
             this.btnMigra.Location = new System.Drawing.Point(56, 31);
             this.btnMigra.Name = "btnMigra";
             this.btnMigra.Size = new System.Drawing.Size(143, 36);
             this.btnMigra.TabIndex = 2;
             this.btnMigra.Text = "Inciar Migraciòn";
             this.btnMigra.UseVisualStyleBackColor = false;
-            this.btnMigra.Click += new System.EventHandler(this.btnMigra_Click_1);
+            this.btnMigra.Click += new System.EventHandler(this.btnMigra_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(260, 404);
             this.Controls.Add(this.btnMigra);
             this.Controls.Add(this.txtInfo);
